@@ -1,0 +1,19 @@
+{% extends "home/base.html" %}
+
+{% block title %}Bem vindo!{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-sm-9">
+      <input type="text" name="url" id="url" class="form-control input-sm" placeholder="https://www.google.com" />
+    </div>
+    <div class="col-sm-3">
+{% csrf_token %}
+      <button id="submitButton" class="btn btn-primary">Enter</button></p>
+    </div>
+  </div>
+  <div class="panel-footer"><span id="url-result">Digite uma url e clique em Enter</span></div>
+</div>
+{% endblock %}
